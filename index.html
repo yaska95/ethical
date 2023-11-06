@@ -126,34 +126,7 @@
 
 <!-- Page footer end --> 
 
-<script type="text/javascript">  
-<!--
-  (function() {
-    var isAndroid = /Android/.test(navigator.userAgent);
-    var isOldAndroid = /Android [123]/.test(navigator.userAgent);
-    
-    if (responsiveApp.isResponsive) {
-      var responsive = (function() {
-        enquire.register(responsiveApp.responsiveMax, {
-          deferSetup : true,
-          setup : function() {
-            if (window == top && isAndroid && isOldAndroid && window.localStorage && !localStorage.getItem("ANDROID_TABLET")) {
-              localStorage.setItem("ANDROID_TABLET", "YES");
-              location.reload();
-            }
-          },
-          match : function() {
-            document.getElementById('language-select').style.display = 'block';
-          },
-          unmatch : function() {
-            document.getElementById('language-select').style.display = 'none';
-          }
-        });
-      }());
-    }
-  }());
-//-->
-</script>
+
 
 
 </body>
